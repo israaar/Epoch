@@ -41,13 +41,6 @@ class AppLayout(PageLayout):
         stringRep = str(diff.days)
         return stringRep
 
-    def DayintheUS(self):
-        date = datetime.datetime.strptime(str(self.todaysDate().date()), "%Y-%m-%d")
-        entryDate = datetime.datetime.strptime("2017-08-15", "%Y-%m-%d")
-        diff = date - entryDate
-        stringRep = str(diff.days)
-        return stringRep
-
     def callback(self, evt=None):  # not sure if kivy sends event info so added optional arg just in case
         print(self.twelveAM.text)
         return self.add_widget(Label(text=self.twelveAM.text))
